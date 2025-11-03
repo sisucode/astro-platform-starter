@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TotalBattleGame from "../components/TotalBattleGame";
+---
+
+<Layout title="Strategislaget - Total Battle inspirerat minispel">
+    <section class="py-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-8 text-center space-y-3">
+                <h1 class="text-4xl font-bold text-blue-200">Strategislaget</h1>
+                <p class="text-lg text-slate-200">
+                    Ett taktiskt minispel inspirerat av Total Battle där du måste välja rätt portal för att slå en övermäktig fiende.
+                </p>
+            </div>
+            <TotalBattleGame client:load />
+        </div>
+    </section>
+</Layout>
