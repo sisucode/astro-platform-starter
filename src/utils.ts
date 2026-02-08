@@ -1,5 +1,6 @@
 import blobshape from 'blobshape';
 import { uniqueNamesGenerator, adjectives, animals } from 'unique-names-generator';
+import type { BlobParameterProps } from './types';
 
 // Note: this only works on the server side
 export function getNetlifyContext() {
@@ -19,7 +20,7 @@ export function uniqueName() {
     return uniqueNamesGenerator(config) + '-' + randomInt(100, 999);
 }
 
-export function generateBlob(parameters?: any) {
+export function generateBlob(parameters?: Partial<BlobParameterProps>) {
     const gradientColors = [
         ['#2E3192', '#1BFFFF'],
         ['#93A5CF', '#E4EfE9'],
