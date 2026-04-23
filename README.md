@@ -49,3 +49,31 @@ netlify dev
 ```
 
 If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+
+## Using Codex with this repository
+
+This project is set up to work well with Codex (CLI/IDE agent workflows):
+
+- The repository is already under Git version control (`.git/`), which Codex expects for safe edit and review workflows.
+- Standard Node.js + npm scripts are available (`dev`, `build`, `preview`) so Codex can run common verification commands after edits.
+- Project instructions can be supplied through `AGENTS.md` files, which this environment supports.
+
+### Quick start
+
+1. Install Codex CLI:
+
+   ```bash
+   npm install -g @openai/codex
+   ```
+
+2. Sign in:
+
+   ```bash
+   codex --login
+   ```
+
+3. Start Codex in this repository root:
+
+   ```bash
+   codex
+   ```
